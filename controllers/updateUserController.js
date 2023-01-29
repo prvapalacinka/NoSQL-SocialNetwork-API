@@ -11,5 +11,8 @@ module.exports = {
         .then((user) => res.json(user))
         .catch((err) => res.status(500).json(err));
     },
+    updateUser(req, res) {
+        User.findByIdAndUpdate()
+        .then((user) => res.json(updateUser));
+    }
 };
-

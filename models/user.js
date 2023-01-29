@@ -32,7 +32,7 @@ const userSchema = new Schema ({
     ]
 }, {
     toJSON: {
-        getters: true,
+        virtuls: true,
     },
 }
 );

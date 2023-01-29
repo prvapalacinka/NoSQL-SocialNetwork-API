@@ -20,7 +20,7 @@ const reactionSchema = new Schema({
         type: Date,
         default: Date.now,
         get: currentDate => currentDate.toLocaleDateString('en-us', { weekday: "long", year: "numeric", month: "short", day: "numeric" })
-    }
+    },
 
 }
 );
@@ -42,19 +42,20 @@ const thoughtSchema = new Schema({
     },
     username: {
         type: String,
-        required: true
+        required: true,
     },
-    reactions: {
-        reactions: [reactionSchema],
-        reaction: reactionSchema,
+    reactions: [reactionSchema],
+},
+    {
+        toJSON: {
+            virtuals: true,
+        }
     }
-}, {
-    toJSON: {
-        getters: true,
-    }
-}
 );
 
+thoughtSchema.virtual('reactionCount').get(function() {
+    return this.reactions.length;
+});
 
 const Thought = model('thought', thoughtSchema)
 
