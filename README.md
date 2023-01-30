@@ -23,4 +23,6 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 Links: 
 https://github.com/prvapalacinka/NoSQL-SocialNetwork-API
 
-src: /Users/petarvidovic/Recordings/NoSQL-SocialNetwork-API-1671768928727.mp4
+drive link to video demonstration: https://drive.google.com/file/d/19DakgJItX5nK-4Q-ctJpf1Sn1K5xCrMd/view
+
+
